@@ -1,0 +1,75 @@
+# Default configuration for energy forecasting experiments
+# This file contains all hyperparameters for reproducibility
+
+# Data configuration
+data:
+  input_window: 120  # Days of history to use as input
+  output_horizon: 7  # Days to forecast
+  train_ratio: 0.7
+  val_ratio: 0.15
+  normalize: true
+  aggregation: "daily"
+
+# Model configurations
+models:
+  lstm:
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.2
+
+  cnn:
+    kernel_sizes: [7, 5, 3]
+    num_filters: [32, 64, 128]
+    dropout: 0.2
+
+  transformer:
+    hidden_size: 64
+    num_layers: 2
+    nhead: 4
+    dropout: 0.2
+
+  ensemble:
+    lstm_hidden: 64
+    lstm_layers: 2
+    cnn_filters: [32, 64, 128]
+    meta_hidden_layers: [10, 8, 6]
+    meta_activation: "relu"
+    meta_solver: "adam"
+    meta_learning_rate: 0.001
+
+# Training configuration
+training:
+  learning_rate: 0.001
+  batch_size: 32
+  num_epochs: 100
+  optimizer: "adam"
+  weight_decay: 0.00001
+  scheduler: "plateau"
+  patience: 10
+  min_delta: 0.0001
+  gradient_clip: 1.0
+
+# Feature configuration
+features:
+  cyclical_features:
+    - day_of_week
+    - day_of_month
+    - day_of_year
+    - week_of_year
+    - month_of_year
+  include_raw: false
+
+# Experiment configuration
+experiment:
+  seed: 42
+  n_runs: 5  # Number of runs for statistical significance
+  save_predictions: true
+  save_models: true
+
+# Output paths
+output:
+  results_dir: "results"
+  figures_dir: "figures"
+  models_dir: "checkpoints"
+  logs_dir: "logs"
+
