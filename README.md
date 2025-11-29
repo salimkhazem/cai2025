@@ -51,15 +51,15 @@
 git clone https://github.com/talan-research/cyclical-energy-forecasting.git
 cd cyclical-energy-forecasting
 
-# Create conda environment
-conda create -n energy-forecast python=3.10 -y
-conda activate energy-forecast
+# Create environment
+uv venv 
+# activate the env 
+source .venv/bin/activate 
+# install requirements using uv
+uv sync
 
-# Install dependencies
-pip install -e .
-
-# Or using requirements.txt
-pip install -r requirements.txt
+# using requirements.txt
+uv pip install -r requirements.txt
 ```
 
 ### Verify Installation
@@ -72,12 +72,13 @@ python scripts/quick_test.py
 
 ## Datasets
 
-We evaluate on two publicly available datasets:
+We evaluate on three publicly available datasets:
 
 | Dataset | Source | Period | Granularity | Samples |
 |---------|--------|--------|-------------|---------|
 | **UCI Electricity** | [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014) | 2011-2014 | 15 min → Daily | 1,462 days |
 | **ODRE French** | [Open Data Réseaux Énergies](https://opendata.reseaux-energies.fr/) | 2019-2023 | 30 min → Daily | ~1,500 days |
+| **French Enedis** | | | | | 
 
 ### Download & Prepare Data
 
