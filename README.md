@@ -28,11 +28,11 @@
 
 ## Highlights
 
-- 🔄 **Cyclical Temporal Encoding**: Sine/cosine transformations preserve temporal continuity
-- 🧠 **Meta-Classifier Ensemble**: Day-specific MLPs combine LSTM and CNN features optimally
-- 📊 **Comprehensive Evaluation**: 6+ baselines on 2 real-world datasets
-- 📈 **Ablation Studies**: Systematic analysis of each component's contribution
-- 🔬 **Full Reproducibility**: Complete codebase with configs and scripts
+- **Cyclical Temporal Encoding**: Sine/cosine transformations preserve temporal continuity
+- **Meta-Classifier Ensemble**: Day-specific MLPs combine LSTM and CNN features optimally
+- **Comprehensive Evaluation**: 6+ baselines on 2 real-world datasets
+- **Ablation Studies**: Systematic analysis of each component's contribution
+- **Full Reproducibility**: Complete codebase with configs and scripts
 
 ---
 
