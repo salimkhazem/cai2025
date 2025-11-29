@@ -16,9 +16,6 @@
   <a href="#citation">Citation</a>
 </p>
 
-<p align="center">
-  <img src="results/figures/architecture.png" alt="Architecture" width="800">
-</p>
 
 ---
 
