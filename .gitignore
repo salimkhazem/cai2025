@@ -1,0 +1,81 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments and tooling
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.poetry/
+.uv/
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+*.egg
+
+# Testing, coverage, and caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# LaTeX artifacts
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.lol
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# Project data and outputs (tracked files remain tracked)
+input/
+results/
+checkpoints/
+
+# Local configs / secrets
+.env
+.env.*
+*.secrets
+*.secret
+
+# Paper build output (keep sources)
+paper/build/
+paper/*.synctex.gz
