@@ -1,4 +1,4 @@
-# Cyclical Temporal Encoding for Ensemble Deep Learning in Multistep Energy Forecasting
+# Cyclical Temporal Encoding and Hybrid Deep Ensembles for Multistep Energy Forecasting
 
 <p align="center">
   <a href="https://www.ieeesmc.org/cai-2026/"><img src="https://img.shields.io/badge/IEEE-CAI%202026-blue.svg" alt="Conference"></a>
