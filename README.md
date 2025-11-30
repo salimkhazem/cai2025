@@ -8,17 +8,12 @@
 </p>
 
 <p align="center">
-  <a href="#abstract">Abstract</a> •
   <a href="#installation">Installation</a> •
   <a href="#datasets">Datasets</a> •
   <a href="#usage">Usage</a> •
   <a href="#results">Results</a> •
   <a href="#citation">Citation</a>
 </p>
-
----
-
----
 
 ## Installation
 
@@ -177,4 +172,3 @@ trainer.fit(train_loader, val_loader)
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
