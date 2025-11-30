@@ -16,20 +16,7 @@
   <a href="#citation">Citation</a>
 </p>
 
-
 ---
-
-## Abstract
-
-> Accurate electricity consumption forecasting is essential for smart grid operations and energy planning. This work presents a deep learning-based framework that combines temporal feature engineering with architectural complementarity for improved short-term predictions. We extract and transform calendar-based features using **sine and cosine encodings** to capture periodic patterns. To address both long-term and local temporal dependencies, we employ an ensemble of two base models: a **Long Short-Term Memory (LSTM)** network and a **Convolutional Neural Network (CNN)**. Their outputs are integrated through a **Meta-Classifier** composed of multiple MLP regressors, each dedicated to one forecast day. Experiments on multiple real-world datasets demonstrate that our hybrid model consistently outperforms individual baselines across a 7-day prediction horizon, achieving an average MAE improvement of **13.2%** over the best individual model.
-
-## Highlights
-
-- **Cyclical Temporal Encoding**: Sine/cosine transformations preserve temporal continuity
-- **Meta-Classifier Ensemble**: Day-specific MLPs combine LSTM and CNN features optimally
-- **Comprehensive Evaluation**: 6+ baselines on 2 real-world datasets
-- **Ablation Studies**: Systematic analysis of each component's contribution
-- **Full Reproducibility**: Complete codebase with configs and scripts
 
 ---
 
@@ -49,9 +36,9 @@ git clone https://github.com/talan-research/cyclical-energy-forecasting.git
 cd cyclical-energy-forecasting
 
 # Create environment
-uv venv 
-# activate the env 
-source .venv/bin/activate 
+uv venv
+# activate the env
+source .venv/bin/activate
 # install requirements using uv
 uv sync
 
@@ -71,11 +58,11 @@ python scripts/quick_test.py
 
 We evaluate on three publicly available datasets:
 
-| Dataset | Source | Period | Granularity | Samples |
-|---------|--------|--------|-------------|---------|
-| **UCI Electricity** | [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014) | 2011-2014 | 15 min → Daily | 1,462 days |
-| **ODRE French** | [Open Data Réseaux Énergies](https://opendata.reseaux-energies.fr/) | 2019-2023 | 30 min → Daily | ~1,500 days |
-| **French Enedis** | | | | | 
+| Dataset             | Source                                                                                       | Period    | Granularity    | Samples     |
+| ------------------- | -------------------------------------------------------------------------------------------- | --------- | -------------- | ----------- |
+| **UCI Electricity** | [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/ElectricityLoadDiagrams20112014) | 2011-2014 | 15 min → Daily | 1,462 days  |
+| **ODRE French**     | [Open Data Réseaux Énergies](https://opendata.reseaux-energies.fr/)                          | 2019-2023 | 30 min → Daily | ~1,500 days |
+| **French Enedis**   |                                                                                              |           |                |             |
 
 ### Download & Prepare Data
 
@@ -113,14 +100,14 @@ Experiments are configured via YAML files in `configs/`:
 ```yaml
 # configs/default.yaml
 data:
-  input_window: 120    # Days of history
-  output_horizon: 7    # Days to forecast
-  
+  input_window: 120 # Days of history
+  output_horizon: 7 # Days to forecast
+
 models:
   lstm:
     hidden_size: 64
     num_layers: 2
-    
+
 training:
   learning_rate: 0.001
   batch_size: 32
@@ -190,3 +177,4 @@ trainer.fit(train_loader, val_loader)
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
